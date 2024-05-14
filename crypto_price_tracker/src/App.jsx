@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import HomePage from "./Pages/HomePage";
 import CoinPage from "./Pages/CoinPage";
 import {makeStyles} from "@material-ui/core";
+// import CryptoContext from "./context/CryptoContext";
 
 function App() {
 
@@ -19,14 +20,15 @@ function App() {
    
   return (
     <BrowserRouter>
+    {/* <CryptoContext> */}
       <div className={classes.App}>
         <Header/>
-        <Routes>
-          <Route path="/" Component={HomePage}/>
-          <Route path="coins/:id" Component={CoinPage}/>
-        </Routes>
-       
+          <Routes>
+            <Route path="/" Component={HomePage}/>
+            <Route path="coins/:id" Component={CoinPage}/>
+          </Routes>
       </div>
+      {/* </CryptoContext> */}
     </BrowserRouter>
   )
 }
